@@ -1,0 +1,42 @@
+.step2 {
+
+  :global {
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .timer {
+      box-shadow: 0px 1px 8px 0px rgb(0 0 0 / 12%);
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .button-container {
+      padding: 30px;
+    }
+
+    .label-box {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        min-width: 120px;
+        display: inline-block;
+      }
+
+      .button {
+        margin-top: 30px;
+        display: inline-flex;
+        justify-content: center;
+
+      }
+    }
+  }
+
+}

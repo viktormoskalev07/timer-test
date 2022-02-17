@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import styles from './index.module.scss'
 
 
-export const Step2: React.FC = () => {
+export const Step3: React.FC = () => {
     const [start, setStart] = useState(false);
     const [counter, setCounter] = useState(0);
 
@@ -39,15 +39,24 @@ export const Step2: React.FC = () => {
         }
     }
     return <section className={styles.step2}>
-        <h1> step 2</h1>
+        <h1> step 3</h1>
+        <div className="card-container">
+            <div className={'card'}>
+                <div className="timer">
+                    {counter}
+                </div>
 
-        <div className={'card'}>
-            <div className="timer">
-                {counter}
+                card
             </div>
+            <div className={'card'}>
+                <div className="timer">
+                    {counter}
+                </div>
 
-            card
+                card
+            </div>
         </div>
+
         <div className="button-container">
             <button onClick={startToggle} className={'button'}> {start ? 'start' : 'stop'} </button>
             <button onClick={resetHandler} className={'button'}> reset</button>
