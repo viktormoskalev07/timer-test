@@ -70,7 +70,7 @@ export const Step6: React.FC = () => {
         const v = event.target.value.split(':');
         const mm = Number(v[v.length - 2]) || 0;
         const ss = Number(v[v.length - 1]) || 0;
-        console.log(mm, ss)
+
         if (/[^0-9:]/.test(event.target.value)) {
             setTimeValidation(false);
             return;
@@ -144,13 +144,13 @@ export const Step6: React.FC = () => {
             <label> <span> y interval (ms)     </span>
                 <input onChange={inputHandler(setIntervalState)} value={intervalState} type="text"/>
             </label>
-            <label> <span> z start   mm:ss     </span>
+            <label> <span style={{color: 'green'}}> z start   mm:ss     </span>
                 <input style={{backgroundColor: timeValidation ? "" : 'red'}} onChange={minutesHandler}
                        placeholder={'3:00'} type="text"/>
             </label>
             <span> you can also type just number without ':' like 123312</span>
 
-            <button className={'button'} onClick={resetHandler}> reset to new Z</button>
+            <button style={{color: 'green'}} className={'button'} onClick={resetHandler}> reset to new Z</button>
         </div>
 
 
